@@ -9,8 +9,8 @@ class Users(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, autoincrement=True)
     uid = db.Column(db.String(128), primary_key=True, nullable=False)
-    username = db.Column(db.String(128), nullable=False)
-    email = db.Column(db.String(128), nullable=False)
+    username = db.Column(db.String(128))
+    email = db.Column(db.String(128))
     created_date = db.Column(db.DateTime, default=func.now(), nullable=False)
 
     def __init__(self, username, email):
